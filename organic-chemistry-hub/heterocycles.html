@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heterocycles Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .quiz-card {
+      background-color: #e0e0e0;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .question-btn {
+      width: 100%;
+      background-color: #cfcfcf;
+      color: #000;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      text-align: left;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .question-btn:hover {
+      background-color: #bdbdbd;
+    }
+
+    .question-content {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .question-content img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #aaa;
+    }
+
+    .solution {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .solution img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #999;
+    }
+
+    .show-solution-btn {
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      font-size: 13px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .show-solution-btn:hover {
+      background-color: #ff5722;
+    }
+
+    .back-link {
+      display: block;
+      margin: 40px auto 0;
+      width: fit-content;
+      text-decoration: none;
+      color: #1976d2;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Heterocycles Quiz</h1>
+
+    <!-- Question 1 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent('q1')">Question 1</button>
+      <div class="question-content" id="q1">
+        <p>What is the product of the following reaction?</p>
+        <img src="images-heterocycles/reaction1.png" alt="Reaction 1">
+        <button class="show-solution-btn" onclick="toggleSolution('s1', this)">Show Solution</button>
+        <div class="solution" id="s1">
+          <img src="images-heterocycles/reaction1-lsg.png" alt="Solution 1">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent('q2')">Question 2</button>
+      <div class="question-content" id="q2">
+        <p>What is the product of the following reaction?</p>
+        <img src="images-heterocycles/reaction2.png" alt="Reaction 2">
+        <button class="show-solution-btn" onclick="toggleSolution('s2', this)">Show Solution</button>
+        <div class="solution" id="s2">
+          <img src="images-heterocycles/reaction2-lsg.png" alt="Solution 2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent('q3')">Question 3</button>
+      <div class="question-content" id="q3">
+        <p>What is the product of the following reaction?</p>
+        <img src="images-heterocycles/reaction3.png" alt="Reaction 3">
+        <button class="show-solution-btn" onclick="toggleSolution('s3', this)">Show Solution</button>
+        <div class="solution" id="s3">
+          <img src="images-heterocycles/reaction3-lsg.png" alt="Solution 3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent('q4')">Question 4</button>
+      <div class="question-content" id="q4">
+        <p>What is the product of the following reaction?</p>
+        <img src="images-heterocycles/reaction4.png" alt="Reaction 4">
+        <button class="show-solution-btn" onclick="toggleSolution('s4', this)">Show Solution</button>
+        <div class="solution" id="s4">
+          <img src="images-heterocycles/reaction4-lsg.png" alt="Solution 4">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent('q5')">Question 5</button>
+      <div class="question-content" id="q5">
+        <p>What is the product of the following reaction?</p>
+        <img src="images-heterocycles/reaction5.png" alt="Reaction 5">
+        <button class="show-solution-btn" onclick="toggleSolution('s5', this)">Show Solution</button>
+        <div class="solution" id="s5">
+          <img src="images-heterocycles/reaction5-lsg.png" alt="Solution 5">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent('q6')">Question 6</button>
+      <div class="question-content" id="q6">
+        <p>What is the product of the following reaction?</p>
+        <img src="images-heterocycles/reaction6.png" alt="Reaction 6">
+        <button class="show-solution-btn" onclick="toggleSolution('s6', this)">Show Solution</button>
+        <div class="solution" id="s6">
+          <img src="images-heterocycles/reaction6-lsg.png" alt="Solution 6">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent('q7')">Question 7</button>
+      <div class="question-content" id="q7">
+        <p>What is the product of the following reaction?</p>
+        <img src="images-heterocycles/reaction7.png" alt="Reaction 7">
+        <button class="show-solution-btn" onclick="toggleSolution('s7', this)">Show Solution</button>
+        <div class="solution" id="s7">
+          <img src="images-heterocycles/reaction7-lsg.png" alt="Solution 7">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent('q8')">Question 8</button>
+      <div class="question-content" id="q8">
+        <p>What is the product of the following reaction?</p>
+        <img src="images-heterocycles/reaction8.png" alt="Reaction 8">
+        <button class="show-solution-btn" onclick="toggleSolution('s8', this)">Show Solution</button>
+        <div class="solution" id="s8">
+          <img src="images-heterocycles/reaction8-lsg.png" alt="Solution 8">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent('q9')">Question 9</button>
+      <div class="question-content" id="q9">
+        <p>What is the product of the following reaction?</p>
+        <img src="images-heterocycles/reaction9.png" alt="Reaction 9">
+        <button class="show-solution-btn" onclick="toggleSolution('s9', this)">Show Solution</button>
+        <div class="solution" id="s9">
+          <img src="images-heterocycles/reaction9-lsg.png" alt="Solution 9">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent('q10')">Question 10</button>
+      <div class="question-content" id="q10">
+        <p>What is the product of the following reaction?</p>
+        <img src="images-heterocycles/reaction10.png" alt="Reaction 10">
+        <button class="show-solution-btn" onclick="toggleSolution('s10', this)">Show Solution</button>
+        <div class="solution" id="s10">
+          <img src="images-heterocycles/reaction10-lsg.png" alt="Solution 10">
+        </div>
+      </div>
+    </div>
+
+    <a class="back-link" href="index.html">← Back to Main Menu</a>
+  </div>
+
+  <script>
+    function toggleContent(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function toggleSolution(id, btn) {
+      const el = document.getElementById(id);
+      const showing = el.style.display === 'block';
+      el.style.display = showing ? 'none' : 'block';
+      btn.textContent = showing ? 'Show Solution' : 'Hide Solution';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photochemistry Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .quiz-card {
+      background-color: #e0e0e0;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .question-btn {
+      width: 100%;
+      background-color: #cfcfcf;
+      color: #000;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      text-align: left;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .question-btn:hover {
+      background-color: #bdbdbd;
+    }
+
+    .question-content {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .question-content img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #aaa;
+    }
+
+    .solution {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .solution img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #999;
+    }
+
+    .show-solution-btn {
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      font-size: 13px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .show-solution-btn:hover {
+      background-color: #ff5722;
+    }
+
+    .back-link {
+      display: block;
+      margin: 40px auto 0;
+      width: fit-content;
+      text-decoration: none;
+      color: #1976d2;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Photochemistry Quiz</h1>
+
+    <!-- Question 1 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent(1)">Question 1</button>
+      <div class="question-content" id="content1">
+        <img src="images-photochemistry/reaction1.png" alt="Reaction 1">
+        <button class="show-solution-btn" onclick="toggleSolution(1)" id="btn1">Show Solution</button>
+        <div class="solution" id="solution1">
+          <img src="images-photochemistry/reaction1-lsg.png" alt="Solution 1">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent(2)">Question 2</button>
+      <div class="question-content" id="content2">
+        <img src="images-photochemistry/reaction2.png" alt="Reaction 2">
+        <button class="show-solution-btn" onclick="toggleSolution(2)" id="btn2">Show Solution</button>
+        <div class="solution" id="solution2">
+          <img src="images-photochemistry/reaction2-lsg.png" alt="Solution 2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent(3)">Question 3</button>
+      <div class="question-content" id="content3">
+        <img src="images-photochemistry/reaction3.png" alt="Reaction 3">
+        <button class="show-solution-btn" onclick="toggleSolution(3)" id="btn3">Show Solution</button>
+        <div class="solution" id="solution3">
+          <img src="images-photochemistry/reaction3-lsg.png" alt="Solution 3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent(4)">Question 4</button>
+      <div class="question-content" id="content4">
+        <img src="images-photochemistry/reaction4.png" alt="Reaction 4">
+        <button class="show-solution-btn" onclick="toggleSolution(4)" id="btn4">Show Solution</button>
+        <div class="solution" id="solution4">
+          <img src="images-photochemistry/reaction4-lsg.png" alt="Solution 4">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent(5)">Question 5</button>
+      <div class="question-content" id="content5">
+        <img src="images-photochemistry/reaction5.png" alt="Reaction 5">
+        <button class="show-solution-btn" onclick="toggleSolution(5)" id="btn5">Show Solution</button>
+        <div class="solution" id="solution5">
+          <img src="images-photochemistry/reaction5-lsg.png" alt="Solution 5">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent(6)">Question 6</button>
+      <div class="question-content" id="content6">
+        <img src="images-photochemistry/reaction6.png" alt="Reaction 6">
+        <button class="show-solution-btn" onclick="toggleSolution(6)" id="btn6">Show Solution</button>
+        <div class="solution" id="solution6">
+          <img src="images-photochemistry/reaction6-lsg.png" alt="Solution 6">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent(7)">Question 7</button>
+      <div class="question-content" id="content7">
+        <img src="images-photochemistry/reaction7.png" alt="Reaction 7">
+        <button class="show-solution-btn" onclick="toggleSolution(7)" id="btn7">Show Solution</button>
+        <div class="solution" id="solution7">
+          <img src="images-photochemistry/reaction7-lsg.png" alt="Solution 7">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent(8)">Question 8</button>
+      <div class="question-content" id="content8">
+        <img src="images-photochemistry/reaction8.png" alt="Reaction 8">
+        <button class="show-solution-btn" onclick="toggleSolution(8)" id="btn8">Show Solution</button>
+        <div class="solution" id="solution8">
+          <img src="images-photochemistry/reaction8-lsg.png" alt="Solution 8">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent(9)">Question 9</button>
+      <div class="question-content" id="content9">
+        <img src="images-photochemistry/reaction9.png" alt="Reaction 9">
+        <button class="show-solution-btn" onclick="toggleSolution(9)" id="btn9">Show Solution</button>
+        <div class="solution" id="solution9">
+          <img src="images-photochemistry/reaction9-lsg.png" alt="Solution 9">
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="quiz-card">
+      <button class="question-btn" onclick="toggleContent(10)">Question 10</button>
+      <div class="question-content" id="content10">
+        <img src="images-photochemistry/reaction10.png" alt="Reaction 10">
+        <button class="show-solution-btn" onclick="toggleSolution(10)" id="btn10">Show Solution</button>
+        <div class="solution" id="solution10">
+          <img src="images-photochemistry/reaction10-lsg.png" alt="Solution 10">
+        </div>
+      </div>
+    </div>
+
+    <a class="back-link" href="index.html">← Back to Main Menu</a>
+  </div>
+
+  <script>
+    function toggleContent(n) {
+      const content = document.getElementById('content' + n);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleSolution(n) {
+      const solution = document.getElementById('solution' + n);
+      const btn = document.getElementById('btn' + n);
+      if (solution.style.display === 'block') {
+        solution.style.display = 'none';
+        btn.innerText = 'Show Solution';
+      } else {
+        solution.style.display = 'block';
+        btn.innerText = 'Hide Solution';
+      }
+    }
+  </script>
+</body>
+</html>
